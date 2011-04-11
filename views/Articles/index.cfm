@@ -1,9 +1,22 @@
+<div class="flash"><p><cfoutput>#flash("message")#</cfoutput></p></div>
+
 <h1>Listing articles</h1>
 
-<cftable query="articles" colHeaders="true" HTMLTable="true">
- <cfcol header="Title" text="#title#" />
- <cfcol header="Body" text="#body#" />
-</cftable>
+<ul>
+<cfoutput query="articles">
+<li>
+<b>#linkTo(text=title, action="show")#</b><br/>
+<i>Actions:
+#linkTo(text='edit', action='edit', key=id)#,
+#linkTo(text='remove', action='delete', key=id, confirm="Remove the article '#title#'?")# 
+</i>
+</li>
+</cfoutput>
+</ul>
+
+<cfoutput>
+	<p>#linkTo(text="Create a New Article", action="new")#</p>
+</cfoutput>
 
 <!---<h1>Listing articles</h1>
 
