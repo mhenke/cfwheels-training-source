@@ -1,7 +1,16 @@
 <cfoutput>
 <h2>#article.title#</h2>
 <p>#article.body#</p>
+
+<h3>Tags</h3>
+<cfloop query="tags">
+	#article.tags().name#<br>
+</cfloop>
+
 #linkTo(text="<< Back to Articles List", action="index")#
+
+#includePartial(article.comments)#
+#includePartial(partial="/articles/comment_form")#
 </cfoutput>
 
 <!---<h1>Showing article</h1>
