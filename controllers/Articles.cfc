@@ -19,11 +19,8 @@
 	</cffunction>
 	
 	<cffunction name="edit">
-    	<cfset article = model("Article").findByKey(params.key) />
-		
-		<cfset tagsChecked = article.tags() />
+    	<cfset article = model("Article").findByKey(key=params.key,include="taggings") />
 		<cfset tags = model("Tag").findAll() />
-		<!---<cfset tags = model("Tag").findAll(returnAs="objects") />--->
 	</cffunction>
 	
 	 <cffunction name="create">

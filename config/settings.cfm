@@ -14,5 +14,6 @@
 --->
 <cfset set(URLRewriting="Partial") />
 <cfset set(dataSourceName="JSBloggers") />
-<cfset set(functionName="textField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement='before') />
-<cfset set(functionName="textArea", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement='before') />
+<cfset set(functionName="textField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
+<cfset set(functionName="textArea", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
+<cfset set(functionName="hasManyCheckBox", labelPlacement="after", appendToLabel="<br>") />

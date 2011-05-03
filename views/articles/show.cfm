@@ -1,13 +1,17 @@
 <cfoutput>
+#linkTo(text="<< Back to Articles List", action="index")#
+	
 <h2>#article.title#</h2>
 <p>#article.body#</p>
 
 <h3>Tags</h3>
-<cfloop query="tags">
-	#article.tags().name#<br>
-</cfloop>
-
-#linkTo(text="<< Back to Articles List", action="index")#
+<cfif article.hasTaggings() EQ "YES">
+	<cfloop index = "i" from = "1" to = "#article.taggingcount()#">
+	#article.tags().name[i]#<br>
+	</cfloop>
+<cfelse>
+	None
+</cfif>
 
 #includePartial(article.comments)#
 #includePartial(partial="/articles/comment_form")#
