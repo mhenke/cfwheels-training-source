@@ -10,12 +10,12 @@
   #hiddenField(objectName='article', property='id')#
   </cfif>
 
-	<cfloop index = "i" from = "1" to = "#article.taggingcount()#">
+	<cfloop query="tags">
 	    #hasManyCheckBox(
-	        label=article.tags().name[i],
+	        label=tags.name,
 	        objectName="article",
 	        association="taggings",
-	        keys="#article.tags().id[i]#,#article.key()#"
+	        keys="#tags.id#,#article.key()#"
 	    )#
 	</cfloop>
 

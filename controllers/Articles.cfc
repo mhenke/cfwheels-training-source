@@ -20,7 +20,7 @@
 	
 	<cffunction name="edit">
     	<cfset article = model("Article").findByKey(key=params.key,include="taggings") />
-		<cfset tags = article.tags(order="name") />
+		<cfset tags =  model("Tag").findAll(order="name") />
 	</cffunction>
 	
 	 <cffunction name="create">
