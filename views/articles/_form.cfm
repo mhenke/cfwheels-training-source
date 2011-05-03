@@ -9,13 +9,13 @@
   <cfif myaction EQ "update">
   #hiddenField(objectName='article', property='id')#
   </cfif>
-  
-	<cfloop query="tags">
+
+	<cfloop index = "i" from = "1" to = "#article.taggingcount()#">
 	    #hasManyCheckBox(
-	        label=tags.name,
+	        label=article.tags().name[i],
 	        objectName="article",
 	        association="taggings",
-	        keys="#tags.id#,#article.key()#"
+	        keys="#article.tags().id[i]#,#article.key()#"
 	    )#
 	</cfloop>
 

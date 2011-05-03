@@ -6,7 +6,7 @@
 	
 	<cffunction name="show">
 	 <cfset article = model("Article").findByKey(key=params.key,include="comments,taggings") />
-	 <cfset tags = article.tags() />
+	 <cfset tags = article.tags(order="name") />
 	 <cfset comment = article.newComment() />
 	</cffunction>
 	
@@ -20,7 +20,7 @@
 	
 	<cffunction name="edit">
     	<cfset article = model("Article").findByKey(key=params.key,include="taggings") />
-		<cfset tags = model("Tag").findAll() />
+		<cfset tags = article.tags(order="name") />
 	</cffunction>
 	
 	 <cffunction name="create">
