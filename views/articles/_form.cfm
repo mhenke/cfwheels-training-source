@@ -9,7 +9,8 @@
   <cfif myaction EQ "update">
   #hiddenField(objectName='article', property='id')#
   </cfif>
-
+  
+	<h3>Tag this post under:</h3>
 	<cfloop query="tags">
 	    #hasManyCheckBox(
 	        label=tags.name,
@@ -18,7 +19,8 @@
 	        keys="#tags.id#,#article.key()#"
 	    )#
 	</cfloop>
-
+	
+	#textFieldTag(name='newTag', label='New Tag')#
   <br>
   #submitTag(value=ucase(myaction))#
  #endFormTag()#

@@ -40,6 +40,7 @@
   <cfset d = a.createComment(authorname = "Chewbacca", body = "RAWR!") />
   <cfabort>
  </cffunction>
+ 
  <cffunction name="five">
   <cfset a = model("article").findByKey(key=3,include="comments") />
   <cfdump var="#a.comments#" />
@@ -47,38 +48,18 @@
  </cffunction>
  
  <cffunction name="six">
- <!---
-  <cfset a = model("article").findByKey(key=3,include="taggings") />
-  <cfdump var="#a#" />
+  <cfset article = model("article").findByKey(key=3,include="taggings") />
+  <cfdump var="#article.tags()#">
  
-  <cfset data = model("tagging").findAll(include="article,tag",where="articleid=3") />
-  <cfdump var="#data#">
-  --->
-  
- <!---
-  tags = article.taggings.collect{|tagging| tagging.tag}
- --->
- 
- <cfset article = model("article").findByKey(key=3,include="taggings") />
- <cfdump var="#article.tags()#">
- 
- <cfset tag = model("tag").findByKey(key=1,include="taggings") />
- <cfdump var="#tag.articles()#">
- <cfabort>
+  <cfset tag = model("tag").findByKey(key=1,include="taggings") />
+  <cfdump var="#tag.articles()#">
+  <cfabort>
  </cffunction>
 
  <cffunction name="seven">
- 
    <cfset a = model("article").findByKey(key=3,include="taggings") />
    <cfdump var="#a.tags()#" />
    <cfabort>
-
-<!---   
-  <cfset t = model("tag").findByKey(key=3,include="articles") />
-  <cfdump var="#t#">
-  <cfabort>
---->
-  
  </cffunction>
 
 </cfcomponent>

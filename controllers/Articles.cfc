@@ -24,9 +24,10 @@
 	</cffunction>
 	
 	<cffunction name="create">
-		<cfset var i = ""/>
 		<cfset article = model("article").create(params.article)/>
-	
+		
+		<cfset newTag()/>
+		
 		<cfset flashInsert(message="Article '#article.title#' was created.")/>
 		<cfset redirectTo(action="index")>
 	</cffunction>
@@ -34,6 +35,9 @@
 	<cffunction name="update">
 		<cfset article = model("Article").findByKey(params.article.id)/>
 		<cfset article.update(params.article)/>
+		
+		<cfset newTag()/>
+		
 		<cfset redirectTo(action="index")/>
 	</cffunction>
 	
@@ -44,4 +48,15 @@
 		<cfset redirectTo(action="index")/>
 	</cffunction>
 	
+	<cffunction name="newTag">
+		<cfif len(trim(params.newTag))>
+			<cfset Tag = model("Tag").findOne(tagid=Tag.id,articleid=article.id)/>
+			
+			<cfif not isObject(Tag)>
+				<cfset Tag = model("Tag").create(name=params.newTag)/>
+			</cfif>
+			
+			<cfset Tagging = model("Tagging").create(tagid=Tag.id,articleid=article.id) />
+		</cfif>
+	</cffunction>
 </cfcomponent>
