@@ -7,7 +7,6 @@ config/development/*
 config/maintenance/*
 config/production/*
 config/testing/*
-controllers/Controller.cfc
 controllers/Wheels.cfc
 db/sql/*
 events/*
