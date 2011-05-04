@@ -1,5 +1,9 @@
 <cfcomponent extends="Controller" output="false">
 	
+	<cffunction name="init">
+
+	</cffunction>
+	
 	<cffunction name="login">
 		<cfset user = model("person").new()>
 	</cffunction>
