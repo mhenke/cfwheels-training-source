@@ -19,8 +19,8 @@
 	        keys="#tags.id#,#article.key()#"
 	    )#
 	</cfloop>
-	
-	#textFieldTag(name='newTag', label='New Tag')#
+	#textField(objectName='tag', property='name', label='New Tag')#
+	<!--- #textField(name='newTag', label='New Tag')# --->
   <br>
   #submitTag(value=ucase(myaction))#
  #endFormTag()#

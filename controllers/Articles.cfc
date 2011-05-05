@@ -13,7 +13,7 @@
 	<cffunction name="new">
 		<cfset var newTagging = arrayNew(1)/>
 		<cfset tags = model("Tag").findAll(order="name")/>
-	
+		<cfset tag = model("tag").new()/>
 		<cfset newTagging[1] = model("tagging").new()/>
 		<cfset article = model("article").new(taggings=newTagging)/>
 	</cffunction>
@@ -21,6 +21,7 @@
 	<cffunction name="edit">
 		<cfset article = model("Article").findByKey(key=params.key, include="taggings")/>
 		<cfset tags = model("Tag").findAll(order="name")/>
+		<cfset tag = model("tag").new()/>
 	</cffunction>
 	
 	<cffunction name="create">
@@ -49,14 +50,15 @@
 	</cffunction>
 	
 	<cffunction name="newTag">
-		<cfif len(trim(params.newTag))>
-			<cfset Tag = model("Tag").findOne(tagid=Tag.id,articleid=article.id)/>
-			
+		<cfif len(params.tag.name) GT 0>
+			<cfset Tag = model("Tag").findOneByName(params.tag.name)/>
+	
 			<cfif not isObject(Tag)>
-				<cfset Tag = model("Tag").create(name=params.newTag)/>
+				<cfset Tag = model("Tag").create(name=params.tag.name)/>
 			</cfif>
+			<cfdump var="#params#">
 			
-			<cfset Tagging = model("Tagging").create(tagid=Tag.id,articleid=article.id) />
+			<cfset Tagging = model("Tagging").create(tagid=tag.id,articleid=article.id) />
 		</cfif>
 	</cffunction>
 </cfcomponent>

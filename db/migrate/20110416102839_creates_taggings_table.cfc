@@ -4,7 +4,6 @@
 	t = createTable(name='taggings',id=false);
     t.integer('tagid');
     t.integer('articleid');
-    t.timestamps();
     t.create();
     
     addRecord(table='taggings',tagid=1,articleid=1);
