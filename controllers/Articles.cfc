@@ -1,7 +1,12 @@
 <cfcomponent extends="Controller" output="false">
+	
+	<cffunction name="init">
+		<cfset provides("html,json,pdf,doc")>
+	</cffunction>
 
 	<cffunction name="index">
 		<cfset articles = model("Article").findAll()>
+		<cfset renderWith(articles)>
 	</cffunction>
 	
 	<cffunction name="show">
