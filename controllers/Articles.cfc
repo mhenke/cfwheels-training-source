@@ -12,8 +12,8 @@
 	
 	<cffunction name="new">
 		<cfset var newTagging = arrayNew(1)/>
-		<cfset tags = model("Tag").findAll(order="name")/>
 		<cfset tag = model("tag").new()/>
+		<cfset tags = model("Tag").findAll(order="name")/>
 		<cfset newTagging[1] = model("tagging").new()/>
 		<cfset article = model("article").new(taggings=newTagging)/>
 	</cffunction>

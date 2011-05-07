@@ -7,7 +7,7 @@
 <h3>Tags</h3>
 <cfif article.hasTaggings() EQ "YES">
 	<cfloop query="tags">
-	#tags.name#<br>
+	#linkTo(text=tags.name, controller="tags", action="show", key=tags.id)#<br>
 	</cfloop>
 <cfelse>
 	None
