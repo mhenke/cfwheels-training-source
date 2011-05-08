@@ -21,3 +21,4 @@
 <cfset set(functionName="hasManyCheckBox", labelPlacement="after", appendToLabel="<br>") />
 
 <cfset addFormat(extension="doc", mimeType="application/msword")/>
+<cfset addFormat(extension="haml", mimeType="text/html")/>
