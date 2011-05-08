@@ -34,11 +34,12 @@ h1, h2, h3, h4, h5 {
   color: darken($bgColor,20);
   margin-bottom: 10px;
 }
-h1 { font-size: 2em; border-bottom: 1px solid $navbar-color; font-weight: bold; width: 80%; }
-h2 { font-size: 1.8em; border-bottom: 1px solid $navbar-color; width: 80%; }
-h3 { font-size: 1.6em; margin-top: 10px; }
+
+h1 { font-size: 2.6em; border-bottom: 1px solid $navbar-color; font-weight: bold; width: 80%; }
+h2 { font-size: 2.2em; border-bottom: 1px solid $navbar-color; width: 80%; }
+h3 { font-size: 1.8em; margin-top: 10px; }
 h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
+h5 { font-size: 1.0em; }
 
 ul, ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
@@ -61,10 +62,11 @@ ol { list-style-type: decimal; }
   width: 80%;
   height: 23px;
   border: 1px solid $navbar-color;
-  ul { list-style-type: none; }
+  ul, ol { margin-left: 5px; }
   li {
     float: left;
     padding-right: 15px;
+    margin: 0px;
     a { font-weight: bold; }
   }
 }

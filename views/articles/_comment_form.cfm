@@ -1,4 +1,4 @@
-<h3>Post a Comment</h3>
+<h4>Post a Comment</h4>
 <cfoutput>
  #errorMessagesFor("comment")#
  #startFormTag(controller="comments",action="create")#

@@ -1,6 +1,6 @@
 <cfoutput>
 <div class="comment">
-  <h4>Comment by #arguments.comment.authorname#</h4>
+  <h5>Comment by #arguments.comment.authorname#</h5>
   <p>#arguments.comment.body#</p>
   <p>Posted #distanceOfTimeInWords(arguments.comment.createdat, now())# later</p>
 </div>
