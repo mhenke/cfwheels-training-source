@@ -15,6 +15,9 @@
 						<li>#linkTo(text="<< Back to Articles List", controller="articles", action="index")#</li>
 					</cfif>
 					<cfif StructKeyExists(session, "user")>
+						<cfif params.controller EQ "articles" and params.action EQ "show">
+						<li>#linkTo(text='Edit Current Article', action='edit', key=params.key)#</li>
+						</cfif>
 						<li>#linkTo(text="Create a New Article", action="new")#</li>
 						<li>#linkTo(text="Logout", controller="main", action="logout")#</li>
 					<cfelseif params.action NEQ "login">

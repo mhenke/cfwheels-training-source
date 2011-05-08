@@ -2,6 +2,8 @@
 	
 	<cffunction name="init">
 		<cfset provides("html,json,pdf,doc")>
+		<cfset filters(through="checkLogin", only="new,create,edit,update,delete")>
+		<!---<cfset filters(through="checkLogin", except="index,login,show")>--->
 	</cffunction>
 
 	<cffunction name="index">

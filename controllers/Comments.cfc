@@ -1,5 +1,9 @@
 <cfcomponent extends="Controller" output="false">
 	
+	<cffunction name="init">
+		<cfset filters(through="checkLogin", except="create")>
+	</cffunction>
+	
 	 <cffunction name="create">
       <cfset comment = model("comment").new(params.comment) />	
 	  <cfif comment.save()>
