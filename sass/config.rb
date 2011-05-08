@@ -1,0 +1,10 @@
+http_path = '/'
+sass_dir = 'src'
+css_dir = '../stylesheets'
+images_dir = '../images'
+javascripts_dir = '../javascripts'
+http_stylesheets_path = 'stylesheets'
+http_javascripts_path = 'javascripts'
+http_images_path = 'images'
+environment = :development
+output_style = :compressed

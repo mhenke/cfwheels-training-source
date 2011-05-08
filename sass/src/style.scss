@@ -1,0 +1,66 @@
+$bgColor: #AAA;
+$fgColor: #0000FF;
+$navbar-color: #ce4dd6;
+
+body {
+  background-color: $bgColor;
+  color: $fgColor;
+  font-size: 14px; 
+  font-family: Verdana, Helvetica, Arial;
+  line-height: 24px;
+}
+
+select, input, textarea {
+  color: $fgColor;
+}
+
+label { color: darken($bgColor,20); 
+        font-weight: bold;
+}
+
+table { border-collapse:collapse; border-spacing:0; }
+
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+
+a {
+  color: lighten($fgColor,10);
+  &:hover { color: darken($fgColor,10);
+            text-decoration: none }
+  &:visited { color: darken($fgColor,10); }
+}
+
+h1, h2, h3, h4, h5 {
+  color: darken($bgColor,20);
+  margin-bottom: 10px;
+}
+h1 { font-size: 2em; border-bottom: 2px solid $navbar-color; font-weight: bold;}
+h2 { font-size: 1.8em; border-bottom: 2px solid $navbar-color;  }
+h3 { font-size: 1.6em; margin-top: 10px; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+
+ul, ol { margin-left: 1.8em; }
+ol { list-style-type: decimal; }
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#content {
+  clear: both;
+  padding-top: 20px;
+}
+
+#navbar {
+  $navbar-width: 800px;
+  $items: 5;
+  
+
+  width: $navbar-width;
+}
