@@ -13,10 +13,3 @@
 </li>
 </cfoutput>
 </ul>
-<cfoutput>
-<cfif StructKeyExists(session, "user")>
-	<p>#linkTo(text="Create a New Article", action="new")#</p>
-<cfelse>
-	#linkTo(text="Login", controller="main", action="login")#
-</cfif>
-</cfoutput>

@@ -16,6 +16,7 @@
 <cfset set(dataSourceName="JSBloggers") />
 
 <cfset set(functionName="textField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
+<cfset set(functionName="passwordField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
 <cfset set(functionName="textFieldTag", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
 <cfset set(functionName="textArea", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
 <cfset set(functionName="hasManyCheckBox", labelPlacement="after", appendToLabel="<br>") />

@@ -20,7 +20,7 @@ label { color: darken($bgColor,20);
 
 table { border-collapse:collapse; border-spacing:0; }
 
-label, input[type=button], input[type=submit], button { cursor: pointer; }
+label, input[type=button], input[type=submit], button { cursor: pointer; margin-top: 15px; }
 button, input, select, textarea { margin: 0; }
 
 a {
@@ -34,8 +34,8 @@ h1, h2, h3, h4, h5 {
   color: darken($bgColor,20);
   margin-bottom: 10px;
 }
-h1 { font-size: 2em; border-bottom: 2px solid $navbar-color; font-weight: bold;}
-h2 { font-size: 1.8em; border-bottom: 2px solid $navbar-color;  }
+h1 { font-size: 2em; border-bottom: 1px solid $navbar-color; font-weight: bold;}
+h2 { font-size: 1.8em; border-bottom: 1px solid $navbar-color;  }
 h3 { font-size: 1.6em; margin-top: 10px; }
 h4 { font-size: 1.4em; }
 h5 { font-size: 1.2em; }
@@ -55,4 +55,16 @@ ol { list-style-type: decimal; }
 #content {
   clear: both;
   padding-top: 20px;
+}
+
+#navbar {
+  width: 80%;
+  height: 23px;
+  border: 1px solid $navbar-color;
+  ul { list-style-type: none; }
+  li {
+    float: left;
+    padding-right: 15px;
+    a { font-weight: bold; }
+  }
 }

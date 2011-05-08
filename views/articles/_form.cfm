@@ -1,6 +1,4 @@
 ﻿<cfoutput>
- #linkTo(text="<< Back to Articles List", action="index")#
-		
  #errorMessagesFor("article")#
  #startFormTag(action=myaction)#
   #textField(objectName='article', property='title', label='Title')#

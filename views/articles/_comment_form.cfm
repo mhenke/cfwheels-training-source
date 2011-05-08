@@ -7,6 +7,6 @@
   #textField(objectName='comment', property='authoremail')#
   #textField(objectName='comment', property='authorurl')#
   #textArea(objectName='comment', property='body')#
-  #submitTag()#
+  #submitTag(value="Create Comment")#
  #endFormTag()#
 </cfoutput>
