@@ -8,7 +8,7 @@
       <cfset comment = model("comment").new(params.comment) />	
 	  <cfif comment.save()>
 	  	<cfset flashInsert(message="Comment was created.") />
-		<cfset redirectTo(back=true)>
+		<cfset redirectTo(controller="articles",action="show",key=comment.articleid)>
 	  <cfelse>
 	  	<cfset flashInsert(message="Comment was not created.") />
 		<cfset tags = model("tag").findAll() />
