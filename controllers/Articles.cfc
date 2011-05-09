@@ -42,10 +42,12 @@
 	
 	<cffunction name="update">
 		<cfset article = model("Article").findByKey(params.article.id)/>
-		<cfset article.update(params.article)/>
-		
-		<cfset newTag()/>
-		
+		<cfif article.update(params.article)>
+			<cfset flashInsert(message="Article '#article.title#' was updated.")/>
+			<cfset newTag()/>
+		<cfelse>
+			<cfset flashInsert(message="Article '#article.title#' was not updated.")/>
+		</cfif>
 		<cfset redirectTo(action="index")/>
 	</cffunction>
 	
