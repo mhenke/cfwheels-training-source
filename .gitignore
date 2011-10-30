@@ -1,5 +1,7 @@
 wheels/*
 plugins/*
+CFIDE/*
+cfide/*
 config/app.cfm
 config/environment.cfm
 config/design/*
@@ -21,7 +23,12 @@ stylesheets/*
 tests/*
 views/helpers.cfm
 views/wheels/*
+WEB-INF/*
+/.htaccess
+/.project
 /Application.cfc
+/cfide
+/crossdomain.xml
 /index.cfm
 /IsapiRewrite4.ini
 /rewrite.cfm
