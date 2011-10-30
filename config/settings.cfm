@@ -12,14 +12,3 @@
 	To run with rewriting "On", you need to apply the necessary rewrite rules on the web server first.
 	<cfset set(URLRewriting="Partial")>
 --->
-<cfset set(URLRewriting="Partial") />
-<cfset set(dataSourceName="JSBloggers") />
-
-<cfset set(functionName="textField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
-<cfset set(functionName="passwordField", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
-<cfset set(functionName="textFieldTag", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
-<cfset set(functionName="textArea", prependToLabel="<p>", prepend="<br>", append="</p>", labelPlacement="before") />
-<cfset set(functionName="hasManyCheckBox", labelPlacement="after", appendToLabel="<br>") />
-
-<cfset addFormat(extension="doc", mimeType="application/msword")/>
-<cfset addFormat(extension="haml", mimeType="text/html")/>
