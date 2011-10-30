@@ -1,5 +1,3 @@
-wheels/*
-plugins/*
 CFIDE/*
 cfide/*
 config/app.cfm
@@ -19,11 +17,13 @@ lib/*
 miscellaneous/*
 models/Model.cfc
 models/Wheels.cfc
+/plugins/*
 stylesheets/*
 tests/*
 views/helpers.cfm
 views/wheels/*
 WEB-INF/*
+wheels/*
 /.htaccess
 /.project
 /Application.cfc
@@ -35,3 +35,4 @@ WEB-INF/*
 /root.cfm
 /settings.xml
 /web.config
+!/plugins/*.zip
