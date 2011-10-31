@@ -4,7 +4,7 @@
 	<cfset set(dataSourceUserName="")>
 	<cfset set(dataSourcePassword="")> 
 --->
-
+<cfset set(dataSourceName="JSBloggers") />
 <!---
 	If you leave this setting commented out, Wheels will try to determine the URL rewrite capabilities automatically.
 	The URLRewriting setting can bet set to "On", "Partial" or "Off".
@@ -12,3 +12,4 @@
 	To run with rewriting "On", you need to apply the necessary rewrite rules on the web server first.
 	<cfset set(URLRewriting="Partial")>
 --->
+<cfset set(URLRewriting="Partial")>
