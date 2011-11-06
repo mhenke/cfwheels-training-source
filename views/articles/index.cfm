@@ -1,7 +1,8 @@
-<h1>
-Listing articles
+<div class="flash">
+<p><cfoutput>#flash("message")#</cfoutput></p>
+</div>
 
-</h1>
+<h1>Listing articles</h1>
 <ul>
 <cfoutput query="articles">  
 <li>
