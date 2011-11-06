@@ -12,7 +12,7 @@
 	<cffunction name="create">  
 		 <cfset article = model("Article").new(params.article) />  
 		 <cfset article.save() />
-		 <cfset flashInsert(message="Article "#article.title#" was created.") />
+		 <cfset flashInsert(message="Article '#article.title#' was created.") />
 		 <cfset redirectTo(action="index") /> 
 	</cffunction>
 
@@ -28,14 +28,14 @@
 	<cffunction name="update">  
 		<cfset article = model("Article").findByKey(params.key) />  
 		<cfset article.update(params.article) /> 
-		<cfset flashInsert(message="Article "#article.title#" was deleted.") />
+		<cfset flashInsert(message="Article '#article.title#' was updated.") />
 	 	<cfset redirectTo(action="show",key=params.key) />  
 	</cffunction>
 
 	<cffunction name="delete">  
 		<cfset article = model("Article").findByKey(params.key) />  
 	 	<cfset article.delete() /> 
-	 	<cfset flashInsert(message="Article "#article.title#" was deleted.") />
+	 	<cfset flashInsert(message="Article '#article.title#' was deleted.") />
 	 	<cfset redirectTo(action="index") />  
 	</cffunction>
 

@@ -1,8 +1,8 @@
-<cfoutput> 
 <div class="flash">
 <p><cfoutput>#flash("message")#</cfoutput></p>
 </div>
 
+<cfoutput> 
 <h2>#article.title#</h2>
 
 <p>#article.body#</p>
