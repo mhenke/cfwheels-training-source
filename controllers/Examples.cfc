@@ -2,7 +2,7 @@
 
  <cffunction name="one">
   <cfset time = now() />
-  <cfdump var="#now()#" />
+  <cfdump var="#time#" />
   <cfset myArticles = model("article").findAll() />
   <cfdump var="#myArticles#" />
   <cfset article = model("article").new() />
@@ -20,46 +20,4 @@
   <cfabort>
  </cffunction>
  
-  <cffunction name="three">
-	<cfset a = model("article").findByKey(key=3,include="comments") />
-    <cfdump var="#a.comments#" />
-	<cfdump var="#model("comment").new()#" />
-	<cfdump var="#a.newComment()#" />
-  <cfabort>
- </cffunction>
- 
- <cffunction name="four">
-  <cfset a = model("article").findByKey(key=3,include="comments") />
-  
-  <cfset c = a.newComment() />
-  <cfset c.authorname = "Daffy Duck" />
-  <cfset c.authorurl = "http://daffyduck.com" />
-  <cfset c.body = "I think this article is thhh-thhh-thupid!" />
-  <cfset c.save() />
-
-  <cfset d = a.createComment(authorname = "Chewbacca", body = "RAWR!") />
-  <cfabort>
- </cffunction>
- 
- <cffunction name="five">
-  <cfset a = model("article").findByKey(key=3,include="comments") />
-  <cfdump var="#a.comments#" />
-  <cfabort>
- </cffunction>
- 
- <cffunction name="six">
-  <cfset article = model("article").findByKey(key=3,include="taggings") />
-  <cfdump var="#article.tags()#">
- 
-  <cfset tag = model("tag").findByKey(key=1,include="taggings") />
-  <cfdump var="#tag.articles()#">
-  <cfabort>
- </cffunction>
-
- <cffunction name="seven">
-   <cfset a = model("article").findByKey(key=3,include="taggings") />
-   <cfdump var="#a.tags()#" />
-   <cfabort>
- </cffunction>
-
 </cfcomponent>
