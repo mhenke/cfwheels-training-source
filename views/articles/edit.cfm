@@ -1,2 +1,2 @@
-<h1>Create a New Article</h1>
+<h1>Edit an Article</h1>
 <cfoutput>#includePartial("form")#</cfoutput>

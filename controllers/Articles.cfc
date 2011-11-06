@@ -6,6 +6,7 @@
 
 	<cffunction name="new">
 		<cfset article = model("Article").new() />
+		<cfset myaction="create" />
 	</cffunction>
 
 	<cffunction name="create">  
@@ -19,7 +20,20 @@
 	</cffunction>
 
 	<cffunction name="edit">  
- 		<cfset article = model("Article").findByKey(params.key) />  
+ 		<cfset article = model("Article").findByKey(params.key) /> 
+ 		<cfset myaction="update" />
+	</cffunction>
+
+	<cffunction name="update">  
+		<cfset article = model("Article").findByKey(params.key) />  
+		<cfset article.update(params.article) />  
+	 	<cfset redirectTo(action="show",key=params.key) />  
+	</cffunction>
+
+	<cffunction name="delete">  
+		<cfset article = model("Article").findByKey(params.key) />  
+	 	<cfset article.delete() />  
+	 	<cfset redirectTo(action="index") />  
 	</cffunction>
 
 </cfcomponent>
