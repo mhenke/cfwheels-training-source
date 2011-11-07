@@ -17,7 +17,7 @@
 	</cffunction>
 
 	<cffunction name="show">
-		<cfset article = model("Article").findByKey(params.key) />
+		<cfset article = model("Article").findByKey(key=params.key, include="comments") />
 	</cffunction>
 
 	<cffunction name="edit">  

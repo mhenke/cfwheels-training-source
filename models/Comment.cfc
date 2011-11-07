@@ -1,7 +1,7 @@
 <cfcomponent extends="Model" output="false">
 
  <cffunction name="init">  
-  <cfset hasMany("comments") />  
+  <cfset belongsTo("article") />  
  </cffunction>
 
 </cfcomponent>
