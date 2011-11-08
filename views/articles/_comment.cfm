@@ -1,6 +1,8 @@
 <cfoutput>  
+<cfloop array=#article.comments# index="comment">
 <div class="comment">
- <h4>Comment by #arguments.comment.authorname#</h4> 
- <p>#arguments.comment.body#</p>
+ <h4>Comment by #comment.authorname#</h4> 
+ <p>#comment.body#</p>
 </div>
+</cfloop>
 </cfoutput>

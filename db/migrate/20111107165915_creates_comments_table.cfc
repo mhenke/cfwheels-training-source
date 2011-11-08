@@ -21,7 +21,7 @@
 <cfcomponent extends="plugins.dbmigrate.Migration" hint="creates comments table">
   <cffunction name="up">
     <cfscript>
-      t = createTable(name='Comments');
+      t = createTable(name='comments');
       t.integer("articleid");  
       t.string("authorname");
       t.text('body');
@@ -31,7 +31,7 @@
   </cffunction>
   <cffunction name="down">
     <cfscript>
-      dropTable(name='Comments');
+      dropTable(name='comments');
     </cfscript>
   </cffunction>
 </cfcomponent>

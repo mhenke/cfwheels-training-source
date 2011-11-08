@@ -7,7 +7,9 @@
 
 <p>#article.body#</p>
 <h3>Comments</h3>
+#includePartial("/articles/comment")#
 
-<cfoutput>#includePartial(article.comments)#</cfoutput>
+#includePartial("/articles/commentform")#
+
 #linkTo (text="<< Back to Articles List", controller="articles", action="index")#  
 </cfoutput>
