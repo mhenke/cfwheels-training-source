@@ -6,7 +6,8 @@
 <h2>#article.title#</h2>
 
 <p>#article.body#</p>
-<h3>Comments</h3>
+
+<h3>Comments ( #article.commentCount()# )</h3>
 #includePartial("/articles/comment")#
 #includePartial("/articles/commentform")#
 
