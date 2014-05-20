@@ -65,7 +65,6 @@
 			<cfif not isObject(Tag)>
 				<cfset Tag = model("Tag").create(name=params.tag.name)/>
 			</cfif>
-			<cfdump var="#params#">
 			
 			<cfset Tagging = model("Tagging").create(tagid=tag.id,articleid=article.id) />
 		</cfif>
